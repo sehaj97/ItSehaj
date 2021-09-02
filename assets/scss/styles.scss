@@ -17,23 +17,51 @@ header{
         top: 0;
         z-index: 9999;
 
-        h1{
+        div {
             width: 30%;
+            a{
+                text-decoration: none;
+                img {
+                    width: 70%;
+                }
+            }
         }
 
         nav{
-            width: 40%;
+            width: 50%;
+            align-items: center;
+            display: flex;
+
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: center;
                 list-style: none;
+                flex: 1;
 
                 li{
                     a{
                         justify-content: center;
                         display: flex;
+                        color: #155263;
+                        text-decoration: none;
+                        span {
+                            display: inline-block;
+                            &::after {
+                                content: '';
+                                width: 0px;
+                                height: 1px;
+                                display: block;
+                                background: #155263;
+                                transition: 300ms;
+                              }
+                              &:hover{
+                                  &::after {
+                                    width: 100%;
+                                  }
+                              }
+                        }
                     }           
                 }
             }
