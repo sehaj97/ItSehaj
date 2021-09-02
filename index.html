@@ -4,32 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/scss/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>
-          <a href="/">RUN BUDDY</a>
-        </h1>
+        <div>
+          <a href="#intro">
+            <img src="./assets/images/logo.png" alt="this is my logo">
+          </a>
+        </div>
         <nav>
           <ul>
             <li>
-              <a href="#home">HOME</a>
+              <a href="#intro"><span>HOME</span></a>
             </li>
             <li>
-              <a href="#skills">SKILLS</a>
+              <a href="#about"><span>ABOUT ME</span></a>
             </li>
             <li>
-              <a href="#work">WORK EXPERIENCE</a>
+              <a href="#skills"><span>SKILLS</span></a>
             </li>
             <li>
-              <a href="#projects">PROJECTS</a>
+              <a href="#exp"><span>EXPERIENCE</span></a>
             </li>
             <li>
-              <a href="#contact">CONTACT ME</a>
+              <a href="#projects"><span>PROJECTS</span></a>
+            </li>
+            <li>
+              <a href="#contact"><span>CONTACT ME</span></a>
+            </li>
+            <li>
+              <a href="#"><span>RESUME</span></a>
             </li>
           </ul>
         </nav>
       </header>
+
+      <main>
+        <section id="intro" class="hero">
+          <p>
+            <span>Hello, My Name is Sehaj</span>
+            <img src="./assets/images/developer.png" alt="my profile picture">
+            <span>On Long Roads, Destinations are always unknown.</span> 
+          </p>
+          <img class="profile-pic" src="./assets/images/pic.png" alt="my profile picture">
+        </section>
+        
+        <section id="about" class="about-me flex-column">
+          <h1>About Me</h1>
+          <hr class="custom-divider"/>
+          <p>
+          seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies fashion axe occupy readymade put a bird on it
+          messenger bag Wes Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb hashtag trust fund
+          Williamsburg biodiesel fixie farm-to-table 8-bit banjo XOXO Banksy chillwave bicycle rights retro cliche
+          tattooed bespoke irony mumblecore Shoreditch deep v polaroid McSweeney's bitters cray gentrify tofu Marfa you
+          probably haven't heard of them yr banh mi asymmetrical art party selvage letterpress High Life.
+        </p>
+        </section>
+
+        <section id="skills" class="inverted-Section flex-column">
+          <h1>Skills</h1>
+          <hr class="custom-divider"/>
+        </section>
+
+        <section id="exp" class="my-skills flex-column">
+          <h1>Work Experience</h1>
+          <hr class="custom-divider"/>
+        </section>
+
+        <section id="projects" class="inverted-Section flex-column">
+          <h1>Projects</h1>
+          <hr class="custom-divider"/>
+        </section>
+
+        <section id="contact" class="flex-column">
+          <h1>Contact Me</h1>
+          <hr class="custom-divider"/>
+        </section>
+      </main>
 </body>
 </html>
