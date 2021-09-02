@@ -1,14 +1,17 @@
+$color-yellow: #ffc107;
+$color-off-blue: #155263;
+
 *
 {
    font-family: 'Roboto', sans-serif;
 }
 
 body{
-    background-color: #ffc107;
+    background-color: $color-yellow;    
+    margin: 0;
 }
 
 header{
-        padding: 20px 35px;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -16,6 +19,7 @@ header{
         position: -webkit-sticky;
         top: 0;
         z-index: 9999;
+        background-color: $color-yellow;
 
         div {
             width: 30%;
@@ -44,8 +48,9 @@ header{
                     a{
                         justify-content: center;
                         display: flex;
-                        color: #155263;
+                        color: $color-off-blue;
                         text-decoration: none;
+                        font-weight: bold;
                         span {
                             display: inline-block;
                             &::after {
@@ -53,7 +58,7 @@ header{
                                 width: 0px;
                                 height: 1px;
                                 display: block;
-                                background: #155263;
+                                background: $color-off-blue;
                                 transition: 300ms;
                               }
                               &:hover{
@@ -66,4 +71,36 @@ header{
                 }
             }
         }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 45vw;
+    p{
+        text-align: right;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            margin: 5% 0;
+        }
+        img{
+            width: 65%;
+        }
+        transition: transform .5s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    .profile-pic{
+        border: 10px solid $color-off-blue;
+        transition: transform .5s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }

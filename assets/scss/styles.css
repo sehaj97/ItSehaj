@@ -4,10 +4,10 @@
 
 body {
   background-color: #ffc107;
+  margin: 0;
 }
 
 header {
-  padding: 20px 35px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -15,6 +15,7 @@ header {
   position: -webkit-sticky;
   top: 0;
   z-index: 9999;
+  background-color: #ffc107;
 }
 header div {
   width: 30%;
@@ -43,6 +44,7 @@ header nav ul li a {
   display: flex;
   color: #155263;
   text-decoration: none;
+  font-weight: bold;
 }
 header nav ul li a span {
   display: inline-block;
@@ -57,6 +59,38 @@ header nav ul li a span::after {
 }
 header nav ul li a span:hover::after {
   width: 100%;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 45vw;
+}
+.hero p {
+  text-align: right;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
+}
+.hero p span {
+  margin: 5% 0;
+}
+.hero p img {
+  width: 65%;
+}
+.hero p:hover {
+  transform: scale(1.2);
+}
+.hero .profile-pic {
+  border: 10px solid #155263;
+  transition: transform 0.5s;
+}
+.hero .profile-pic:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */
