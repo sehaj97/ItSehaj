@@ -1,3 +1,41 @@
+*
+{
+   font-family: 'Roboto', sans-serif;
+}
+
 body{
     background-color: #ffc107;
+}
+
+header{
+        padding: 20px 35px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 9999;
+
+        h1{
+            width: 30%;
+        }
+
+        nav{
+            width: 40%;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+
+                li{
+                    a{
+                        justify-content: center;
+                        display: flex;
+                    }           
+                }
+            }
+        }
 }

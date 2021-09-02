@@ -1,5 +1,37 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   background-color: #ffc107;
+}
+
+header {
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 9999;
+}
+header h1 {
+  width: 30%;
+}
+header nav {
+  width: 40%;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li a {
+  justify-content: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
