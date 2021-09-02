@@ -15,7 +15,7 @@ header {
   position: -webkit-sticky;
   top: 0;
   z-index: 9999;
-  background-color: #ffc107;
+  background-color: beige;
 }
 header div {
   width: 30%;
@@ -24,7 +24,7 @@ header div a {
   text-decoration: none;
 }
 header div a img {
-  width: 70%;
+  width: 40%;
 }
 header nav {
   width: 50%;
@@ -92,16 +92,17 @@ main section hr {
   margin: 5% 0;
 }
 .hero p img {
-  width: 65%;
+  width: 50%;
+  border: 10px solid #155263;
 }
 .hero p:hover {
   transform: scale(1.2);
 }
-.hero .profile-pic {
-  border: 10px solid #155263;
+.hero .wonder-pic {
+  width: 40%;
   transition: transform 0.5s;
 }
-.hero .profile-pic:hover {
+.hero .wonder-pic:hover {
   transform: scale(1.1);
 }
 
@@ -113,6 +114,7 @@ main section hr {
 
 .about-me {
   margin: 0 auto;
+  padding-top: 0px;
 }
 .about-me p {
   text-align: center;
@@ -125,6 +127,27 @@ main section hr {
 }
 .inverted-Section hr {
   border-top: 10px double white;
+}
+
+.skill-items {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  margin: 2% 0;
+}
+.skill-items div {
+  transition: transform 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill-items div:hover {
+  transform: rotateY(359deg);
+}
+.skill-items div img {
+  width: 50px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -19,14 +19,14 @@ header{
         position: -webkit-sticky;
         top: 0;
         z-index: 9999;
-        background-color: $color-yellow;
+        background-color: beige;
 
         div {
             width: 30%;
             a{
                 text-decoration: none;
                 img {
-                    width: 70%;
+                    width: 40%;
                 }
             }
         }
@@ -106,15 +106,16 @@ main{
             margin: 5% 0;
         }
         img{
-            width: 65%;
+            width:50%;
+            border: 10px solid $color-off-blue;
         }
         transition: transform .5s;
         &:hover{
             transform: scale(1.2);
         }
     }
-    .profile-pic{
-        border: 10px solid $color-off-blue;
+    .wonder-pic{
+        width: 40%;
         transition: transform .5s;
         &:hover{
             transform: scale(1.1);
@@ -130,6 +131,7 @@ main{
 
 .about-me{
     margin: 0 auto;
+    padding-top: 0px;
     p{
         text-align: center;
         width: 65%;
@@ -141,5 +143,27 @@ main{
     color: white;
     hr{
         border-top: 10px double white;
+    }
+}
+
+.skill-items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 2% 0;
+    div{
+        transition: transform 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            transform: rotateY(359deg);
+        }
+
+        img{     
+            width: 50px;
+            height: 50px;
+        }
     }
 }
