@@ -73,6 +73,23 @@ header{
         }
 }
 
+
+main{
+    section{
+        &:not(:first-child) {
+            padding: 8% 0 8% 0;
+        }
+        h1{
+            font-size: 5vw;
+            margin: 0 5px;
+        }
+        hr{
+            border-top: 10px double #000000;
+            width: 60%;
+        }
+    }
+}
+
 .hero {
     display: flex;
     justify-content: space-evenly;
@@ -102,5 +119,27 @@ header{
         &:hover{
             transform: scale(1.1);
         }
+    }
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me{
+    margin: 0 auto;
+    p{
+        text-align: center;
+        width: 65%;
+    }
+}
+
+.inverted-Section{
+    background-color: black; 
+    color: white;
+    hr{
+        border-top: 10px double white;
     }
 }
