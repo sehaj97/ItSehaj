@@ -167,3 +167,33 @@ main{
         }
     }
 }
+
+.card{
+    height: 200px;
+    width: 350px;
+    border-radius: 50px;
+    background-color: black;
+    background-image: linear-gradient(red, $color-yellow);
+    transition: transform 1s;
+
+    &:hover{
+        transform: scaleY(1.1);
+    }
+    .card-item{
+        color: white;
+        height: 200px;
+        width: 350px;
+        border-radius: 50px;
+        opacity: 30%;
+        transition: opacity 1s;
+        &:hover{
+            opacity: 100%;
+        }
+    }
+}
+
+.project-items{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}

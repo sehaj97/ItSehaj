@@ -150,4 +150,33 @@ main section hr {
   height: 50px;
 }
 
+.card {
+  height: 200px;
+  width: 350px;
+  border-radius: 50px;
+  background-color: black;
+  background-image: linear-gradient(red, #ffc107);
+  transition: transform 1s;
+}
+.card:hover {
+  transform: scaleY(1.1);
+}
+.card .card-item {
+  color: white;
+  height: 200px;
+  width: 350px;
+  border-radius: 50px;
+  opacity: 30%;
+  transition: opacity 1s;
+}
+.card .card-item:hover {
+  opacity: 100%;
+}
+
+.project-items {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
 /*# sourceMappingURL=styles.css.map */
