@@ -132,15 +132,35 @@ footer{
     align-items: center;
     height: 80vh;
     padding-bottom: 0;
+    @media screen and (max-width: $medium){
+        height: 60vh;
+        padding-bottom: 0;
+        padding-top: 0px;
+    }
+    @media screen and (max-width: $mobile){
+        padding-bottom: 15%;
+    }
     p{
         text-align: right;
         width: 45%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (max-width: $small){
+            width: 50%;
+        }
+        @media screen and (max-width: $mobile){
+            width: 80%;
+        }
         span{
             margin: 5% 0;
             font-size: 1.4em;
+            @media screen and (max-width: $medium){
+                font-size: 1em;
+            }
+            @media screen and (max-width: $mobile){
+                display: none;
+            }
         }
         img{
             width: 70%;
@@ -149,12 +169,21 @@ footer{
             &:hover{
                 transform: rotateY(359deg);
             }
+            @media screen and (max-width: $mobile){
+                display:none;
+            }
         }
     }
     .profile-pic{
         width:90%;
         border: 10px solid $color-off-blue;
         border-radius: 20%;
+        @media screen and (max-width: $medium){
+            width:80%;
+        }
+        @media screen and (max-width: $mobile){
+            width:100%;
+        }
     }
 }
 

@@ -120,6 +120,18 @@ footer h4 {
   height: 80vh;
   padding-bottom: 0;
 }
+@media screen and (max-width: 1280px) {
+  .hero {
+    height: 60vh;
+    padding-bottom: 0;
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-bottom: 15%;
+  }
+}
 .hero p {
   text-align: right;
   width: 45%;
@@ -127,9 +139,29 @@ footer h4 {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .hero p {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero p {
+    width: 80%;
+  }
+}
 .hero p span {
   margin: 5% 0;
   font-size: 1.4em;
+}
+@media screen and (max-width: 1280px) {
+  .hero p span {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero p span {
+    display: none;
+  }
 }
 .hero p img {
   width: 70%;
@@ -139,10 +171,25 @@ footer h4 {
 .hero p img:hover {
   transform: rotateY(359deg);
 }
+@media screen and (max-width: 768px) {
+  .hero p img {
+    display: none;
+  }
+}
 .hero .profile-pic {
   width: 90%;
   border: 10px solid #155263;
   border-radius: 20%;
+}
+@media screen and (max-width: 1280px) {
+  .hero .profile-pic {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .profile-pic {
+    width: 100%;
+  }
 }
 
 .flex-column {
