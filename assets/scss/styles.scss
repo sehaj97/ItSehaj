@@ -225,6 +225,12 @@ footer{
         &:hover{
             transform: rotateY(359deg);
         }
+        h3{
+            
+        @media screen and (max-width: $mobile){
+            font-size: 1em;
+        }
+        }
 
         img{     
             width: 50px;
@@ -402,4 +408,11 @@ footer{
 
 #close{
     display: none;
+}
+
+.desktop-info{
+    
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
 }
