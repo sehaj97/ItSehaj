@@ -272,6 +272,8 @@ footer{
     background-color: black;
     background-image: linear-gradient(red, $color-yellow);
     transition: transform 1s;
+    text-decoration: none;
+    color: black;
             
     @media screen and (max-width: $small){
         margin: 15px;
