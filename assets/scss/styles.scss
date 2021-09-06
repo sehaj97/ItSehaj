@@ -1,9 +1,14 @@
 $color-yellow: #ffc107;
 $color-off-blue: #155263;
+$mobile: 768px;
+$small: 1024px;
+$medium: 1280px;
+
 
 *
 {
    font-family: 'Roboto', sans-serif;
+   scroll-behavior: smooth;
 }
 
 body{
@@ -23,18 +28,38 @@ header{
 
         div {
             width: 30%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 3.5em;
             a{
+                color: $color-off-blue;
                 text-decoration: none;
-                img {
-                    width: 40%;
-                }
+                font-weight: bold;
+            }
+            @media screen and (max-width: $medium) {
+                width: 20%;
+            }
+            @media screen and (max-width: $small) {
+                font-size: 2.5em;
             }
         }
 
-        nav{
+        .navigation{
             width: 50%;
             align-items: center;
             display: flex;
+                
+            @media screen and (max-width: $medium) {
+                width: 70%;
+            }
+            @media screen and (max-width: $small) {
+                width: 80%;
+            }
+            
+            @media screen and (max-width: $mobile) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -43,9 +68,8 @@ header{
                 align-items: center;
                 list-style: none;
                 flex: 1;
-
                 li{
-                    a{
+                    .selector{
                         justify-content: center;
                         display: flex;
                         color: $color-off-blue;
@@ -76,9 +100,9 @@ header{
 
 main{
     section{
-        &:not(:first-child) {
-            padding: 8% 0 8% 0;
-        }
+        
+        padding: 8% 0 8% 0;
+
         h1{
             font-size: 5vw;
             margin: 0 5px;
@@ -90,12 +114,24 @@ main{
     }
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+
+    h4{
+        margin-bottom: 0;
+    }
+}
+
 .hero {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    height: 45vw;
+    height: 80vh;
+    padding-bottom: 0;
     p{
         text-align: right;
         width: 45%;
@@ -104,22 +140,21 @@ main{
         align-items: center;
         span{
             margin: 5% 0;
+            font-size: 1.4em;
         }
         img{
-            width:50%;
-            border: 10px solid $color-off-blue;
-        }
-        transition: transform .5s;
-        &:hover{
-            transform: scale(1.2);
+            width: 70%;
+            border-radius: 65%;
+            transition: transform 1s;
+            &:hover{
+                transform: rotateY(359deg);
+            }
         }
     }
-    .wonder-pic{
-        width: 40%;
-        transition: transform .5s;
-        &:hover{
-            transform: scale(1.1);
-        }
+    .profile-pic{
+        width:90%;
+        border: 10px solid $color-off-blue;
+        border-radius: 20%;
     }
 }
 
@@ -131,10 +166,11 @@ main{
 
 .about-me{
     margin: 0 auto;
-    padding-top: 0px;
+    padding-top: 4% !important;
     p{
         text-align: center;
-        width: 65%;
+        width: 70%;
+        font-size: 1.2em;
     }
 }
 
@@ -168,32 +204,173 @@ main{
     }
 }
 
-.card{
-    height: 200px;
-    width: 350px;
+.project-items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    padding-top: 5%;
+}
+
+.first-Card{
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{    
+    height: 250px;
+    width: 500px;
     border-radius: 50px;
+    background-size: cover;
+}
+
+.first-card-container{    
+    height: 300px;
+    width: 570px;
+}
+
+.cards{
     background-color: black;
     background-image: linear-gradient(red, $color-yellow);
     transition: transform 1s;
 
     &:hover{
-        transform: scaleY(1.1);
+        transform: scale(1.1);
     }
-    .card-item{
-        color: white;
-        height: 200px;
-        width: 350px;
-        border-radius: 50px;
+    .card{
         opacity: 30%;
         transition: opacity 1s;
         &:hover{
             opacity: 100%;
         }
+
+        .card-item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            div{
+                background-color: beige;
+                width: 40%;
+                height: 25%;
+                border-radius: 0 50px 50px 0;
+                padding-left: 20px;
+                padding: 10px 20px 10px 20px;
+                span{
+                    font-weight: bold;
+                    font-size: 1.1em;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
     }
 }
 
-.project-items{
+.btn { 
+    background: black;
+    padding: 10px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    @media screen and (max-width: $small) {
+        padding: 10px 20px;
+    }
+}
+
+.contact-form{
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-nav{
+    display: none;
+    @media screen and (max-width: $mobile) {
+        display: block;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 9999;
+        background-color: beige;
+    }
+    div{
+        div{
+            a{
+                text-decoration: none;
+                font-size: 2.5em;
+                margin: 20px;
+                color: $color-off-blue;
+            }
+        }
+    }
+    .nav-links{
+        display: none;
+        ul{
+            @media screen and (max-width: $mobile) {
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                align-items: center;
+                padding: 4vh;
+            }
+            li{
+                @media screen and (max-width: $mobile) {
+                    margin: 10px;
+                    color: $color-off-blue;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                a{
+                    @media screen and (max-width: $mobile) {
+                        justify-content: center;
+                        display: flex;
+                        color: $color-off-blue;
+                        text-decoration: none;
+                        font-weight: bold;
+                        span {
+                            display: inline-block;
+                            &::after {
+                                content: '';
+                                width: 0px;
+                                height: 1px;
+                                display: block;
+                                background: $color-off-blue;
+                                transition: 300ms;
+                              }
+                              &:hover{
+                                  &::after {
+                                    width: 100%;
+                                  }
+                              }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+        
+.icon{
+    display: none;
+    i{
+        margin: 10px;
+    }
+    @media screen and (max-width: $mobile) {
+        display: block;
+        color: $color-off-blue;
+        text-decoration: none;
+        
+        top: 0;
+        position: absolute;
+        right: 20px;
+        margin-left: 10px;
+    }
+}
+
+.desktop-nav{
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+#close{
+    display: none;
 }

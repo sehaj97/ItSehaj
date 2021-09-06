@@ -9,63 +9,104 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Document</title>
 </head>
-<body>
-    <header>
+<body onresize="desktopDisplay()">
+    <header class="desktop-nav">
         <div>
           <a href="#intro">
-            <img src="./assets/images/logo.png" alt="this is my logo">
+            SEHAJ
           </a>
         </div>
-        <nav>
+        <nav class="navigation">
           <ul>
             <li>
-              <a href="#intro"><span>HOME</span></a>
+              <a class="selector" href="#intro"><span>HOME</span></a>
             </li>
             <li>
-              <a href="#about"><span>ABOUT ME</span></a>
+              <a class="selector" href="#about"><span>ABOUT ME</span></a>
             </li>
             <li>
-              <a href="#skills"><span>SKILLS</span></a>
+              <a class="selector" href="#skills"><span>SKILLS</span></a>
             </li>
             <li>
-              <a href="#projects"><span>PROJECTS</span></a>
+              <a class="selector" href="#projects"><span>PROJECTS</span></a>
             </li>
             <li>
-              <a href="#exp"><span>EXPERIENCE</span></a>
+              <a class="selector" href="#contact"><span>CONTACT ME</span></a>
             </li>
             <li>
-              <a href="#contact"><span>CONTACT ME</span></a>
-            </li>
-            <li>
-              <a href="#"><span>RESUME</span></a>
+              <a class="btn" href="./assets/resume/SehajpreetSingh_Resume_Updated.pdf" target="_blank" style="color: white;"><span>RESUME</span></a>
             </li>
           </ul>
         </nav>
       </header>
 
+      <section id="mobile-navigation" class="navigation mobile-nav">
+        <div>
+          <div>
+            <a href="#intro">
+              SEHAJ
+            </a>
+          </div>
+        
+          <a href="javascript:void(0);" class="icon" onclick="hambugerDisplay()">
+            <i id="hamburger" class="fa fa-bars fa-2x"></i>
+            <i id="close" class="fa fa-close fa-2x"></i>
+          </a>
+        </div>
+        
+        <div id="headerLinks" class="nav-links">
+          <ul>
+            <li>
+              <a class="selector" href="#intro"><span>HOME</span></a>
+            </li>
+            <li>
+              <a class="selector" href="#about"><span>ABOUT ME</span></a>
+            </li>
+            <li>
+              <a class="selector" href="#skills"><span>SKILLS</span></a>
+            </li>
+            <li>
+              <a class="selector" href="#projects"><span>PROJECTS</span></a>
+            </li>
+            <li>
+              <a class="selector" href="#contact"><span>CONTACT ME</span></a>
+            </li>
+            <li>
+              <a class="btn" href="./assets/resume/SehajpreetSingh_Resume_Updated.pdf" target="_blank" style="color: white;"><span>RESUME</span></a>
+            </li>
+          </ul>
+        </div>
+        
+      </section>
+
       <main>
         <section id="intro" class="hero">
           <p>
-            <span>Hello, My Name is Sehaj</span>
-            <img class="profile-pic" src="./assets/images/pic.png" alt="my profile picture">
+            <span>Hello, My Name is Sehajpreet Singh</span>
+            <img src="./assets/images/developer.png" alt="my profile picture">
             <span>On Long Roads, Destinations are always unknown.</span> 
           </p>
-          <img class="wonder-pic" src="./assets/images/lost.svg" alt="my profile picture">
+          <div>
+            <img class="profile-pic" src="./assets/images/pic.png" alt="my profile picture">
+            <div></div>
+          </div>
         </section>
         
         <section id="about" class="about-me flex-column">
           <h1>About Me</h1>
           <hr class="custom-divider"/>
           <p>
-          seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies fashion axe occupy readymade put a bird on it
-          messenger bag Wes Anderson Schlitz plaid Bushwick church-key lo-fi skateboard slow-carb hashtag trust fund
-          Williamsburg biodiesel fixie farm-to-table 8-bit banjo XOXO Banksy chillwave bicycle rights retro cliche
-          tattooed bespoke irony mumblecore Shoreditch deep v polaroid McSweeney's bitters cray gentrify tofu Marfa you
-          probably haven't heard of them yr banh mi asymmetrical art party selvage letterpress High Life.
-        </p>
+            Enthusiastic, highly motivated learner and self-starter, eager to meet and solve challenges. Software Developer with the knowledge of ASP.NET MVC, jQuery, HTML5, CSS, Bootstrap and C# using Visual Studio 19. 
+          </p>
+          <p>
+            Highly adaptable, flexible, positive and resilient. Excellent ability to develop, test, document, deploy, analyze and maintain secure program code based on client specifications. Resourceful team player who excels in building trusting relationships both with customers and colleagues. Excellent verbal and written communication skills - able to understand and convey complex product requirements or technical concepts to technical and non-technical audiences. Effective critical thinker with proven researching skills.</p>
         </section>
 
         <section id="skills" class="inverted-Section flex-column">
@@ -116,42 +157,102 @@
         <section id="projects" class="flex-column">
           <h1>Projects</h1>
           <hr class="custom-divider"/>
+          <div class="project-items  first-Card">
+            
+            <div class="card-container cards first-card-container">
+              <div class="card-container card  first-card-container" style="background-image: url('./assets/images/developer.png'); 
+              ">
+                <div class="card-container card-item  first-card-container">
+                  <div>
+                    <span>
+                      Card
+                    </span>
+                    <p>This is content for card</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
           <div class="project-items">
             
-            <div class="card">
-              <div class="card-item" style="background-image: url('./assets/images/developer.png');">
-                <span>
-                  Card
-                </span>
-                <p></p>
+            <div class="card-container cards">
+              <div class="card-container card" style="background-image: url('./assets/images/developer.png');">
+                <div class="card-container card-item">
+                  <div>
+                    <span>
+                      Card
+                    </span>
+                    <p>This is content for card</p>
+                  </div>
+                </div>
               </div>
             </div>
             
-          <div class="card">
-            <h2>
-              Card
-            </h2>
-            <p></p>
-          </div>
-          
-          <div class="card">
-            <h2>
-              Card
-            </h2>
-            <p></p>
-          </div>
+            <div class="card-container cards">
+              <div class="card-container card" style="background-image: url('./assets/images/developer.png');">
+                <div class="card-container card-item">
+                  <div>
+                    <span>
+                      Card
+                    </span>
+                    <p>This is content for card</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
-        <section id="exp" class="inverted-Section flex-column">
-          <h1>Experience</h1>
-          <hr class="custom-divider"/>
-        </section>
-
-        <section id="contact" class="flex-column">
+        <section id="contact" class="inverted-Section flex-column">
           <h1>Contact Me</h1>
           <hr class="custom-divider"/>
+          <form action="mailto:sehamagan@gmail.com" method="post" enctype="text/plain" class="contact-form">
+           
+            <label for="subject">Your Name:</label>
+            <input type="text" name="name">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write something.."></textarea>
+            
+            <input type="submit" value="Send">      
+          </form>
         </section>
       </main>
+
+      <footer>
+        <h4>Made by Sehajpreet Singh. &copy; Copyright 2021. All Rights are Reserved.</h4>
+      </footer>
+
+      <script>
+        function hambugerDisplay() {
+          var nav = document.getElementById("headerLinks");
+          var navHamburgerIcon= document.getElementById("hamburger");
+          var navCloseIcon= document.getElementById("close");
+          if (nav.style.display === "block" && window.innerWidth < 768) {
+            nav.style.display = "none";
+            navHamburgerIcon.style.display = "block";
+            navCloseIcon.style.display = "none";
+
+          } else {
+            nav.style.display = "block";
+            navHamburgerIcon.style.display = "none";
+            navCloseIcon.style.display = "block";
+          }
+        }
+
+        function desktopDisplay() {
+          var nav = document.getElementById("headerLinks");
+          var navHamburgerIcon= document.getElementById("hamburger");
+          var navCloseIcon= document.getElementById("close");
+          if (window.innerWidth < 768) {
+            nav.style.display = "none";
+            navHamburgerIcon.style.display = "block";
+            navCloseIcon.style.display = "none";
+          }
+        }
+      </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 * {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,19 +20,47 @@ header {
 }
 header div {
   width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3.5em;
 }
 header div a {
+  color: #155263;
   text-decoration: none;
+  font-weight: bold;
 }
-header div a img {
-  width: 40%;
+@media screen and (max-width: 1280px) {
+  header div {
+    width: 20%;
+  }
 }
-header nav {
+@media screen and (max-width: 1024px) {
+  header div {
+    font-size: 2.5em;
+  }
+}
+header .navigation {
   width: 50%;
   align-items: center;
   display: flex;
 }
-header nav ul {
+@media screen and (max-width: 1280px) {
+  header .navigation {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navigation {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .navigation {
+    display: none;
+  }
+}
+header .navigation ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -39,17 +68,17 @@ header nav ul {
   list-style: none;
   flex: 1;
 }
-header nav ul li a {
+header .navigation ul li .selector {
   justify-content: center;
   display: flex;
   color: #155263;
   text-decoration: none;
   font-weight: bold;
 }
-header nav ul li a span {
+header .navigation ul li .selector span {
   display: inline-block;
 }
-header nav ul li a span::after {
+header .navigation ul li .selector span::after {
   content: "";
   width: 0px;
   height: 1px;
@@ -57,11 +86,11 @@ header nav ul li a span::after {
   background: #155263;
   transition: 300ms;
 }
-header nav ul li a span:hover::after {
+header .navigation ul li .selector span:hover::after {
   width: 100%;
 }
 
-main section:not(:first-child) {
+main section {
   padding: 8% 0 8% 0;
 }
 main section h1 {
@@ -73,12 +102,23 @@ main section hr {
   width: 60%;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+}
+footer h4 {
+  margin-bottom: 0;
+}
+
 .hero {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  height: 45vw;
+  height: 80vh;
+  padding-bottom: 0;
 }
 .hero p {
   text-align: right;
@@ -86,24 +126,23 @@ main section hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.5s;
 }
 .hero p span {
   margin: 5% 0;
+  font-size: 1.4em;
 }
 .hero p img {
-  width: 50%;
+  width: 70%;
+  border-radius: 65%;
+  transition: transform 1s;
+}
+.hero p img:hover {
+  transform: rotateY(359deg);
+}
+.hero .profile-pic {
+  width: 90%;
   border: 10px solid #155263;
-}
-.hero p:hover {
-  transform: scale(1.2);
-}
-.hero .wonder-pic {
-  width: 40%;
-  transition: transform 0.5s;
-}
-.hero .wonder-pic:hover {
-  transform: scale(1.1);
+  border-radius: 20%;
 }
 
 .flex-column {
@@ -114,11 +153,12 @@ main section hr {
 
 .about-me {
   margin: 0 auto;
-  padding-top: 0px;
+  padding-top: 4% !important;
 }
 .about-me p {
   text-align: center;
-  width: 65%;
+  width: 70%;
+  font-size: 1.2em;
 }
 
 .inverted-Section {
@@ -150,33 +190,172 @@ main section hr {
   height: 50px;
 }
 
-.card {
-  height: 200px;
-  width: 350px;
+.project-items {
+  display: flex;
+  justify-content: space-evenly;
+  width: 85%;
+  padding-top: 5%;
+}
+
+.first-Card {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  height: 250px;
+  width: 500px;
   border-radius: 50px;
+  background-size: cover;
+}
+
+.first-card-container {
+  height: 300px;
+  width: 570px;
+}
+
+.cards {
   background-color: black;
   background-image: linear-gradient(red, #ffc107);
   transition: transform 1s;
 }
-.card:hover {
-  transform: scaleY(1.1);
+.cards:hover {
+  transform: scale(1.1);
 }
-.card .card-item {
-  color: white;
-  height: 200px;
-  width: 350px;
-  border-radius: 50px;
+.cards .card {
   opacity: 30%;
   transition: opacity 1s;
 }
-.card .card-item:hover {
+.cards .card:hover {
   opacity: 100%;
 }
-
-.project-items {
+.cards .card .card-item {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cards .card .card-item div {
+  background-color: beige;
+  width: 40%;
+  height: 25%;
+  border-radius: 0 50px 50px 0;
+  padding-left: 20px;
+  padding: 10px 20px 10px 20px;
+}
+.cards .card .card-item div span {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: black;
+  padding: 10px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-nav {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: beige;
+  }
+}
+.mobile-nav div div a {
+  text-decoration: none;
+  font-size: 2.5em;
+  margin: 20px;
+  color: #155263;
+}
+.mobile-nav .nav-links {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .mobile-nav .nav-links ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-nav .nav-links ul li {
+    margin: 10px;
+    color: #155263;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mobile-nav .nav-links ul li a {
+    justify-content: center;
+    display: flex;
+    color: #155263;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .mobile-nav .nav-links ul li a span {
+    display: inline-block;
+  }
+  .mobile-nav .nav-links ul li a span::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #155263;
+    transition: 300ms;
+  }
+  .mobile-nav .nav-links ul li a span:hover::after {
+    width: 100%;
+  }
+}
+
+.icon {
+  display: none;
+}
+.icon i {
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .icon {
+    display: block;
+    color: #155263;
+    text-decoration: none;
+    top: 0;
+    position: absolute;
+    right: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+#close {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
