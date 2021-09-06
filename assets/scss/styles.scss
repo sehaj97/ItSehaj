@@ -337,6 +337,21 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    label{
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    input{
+        border-radius: 15px;
+        width: 30vw;
+    }
+
+    textarea{
+        margin-bottom: 15px;
+        width: 50vw;
+        height: 15vh;
+    
+    }
 }
 
 .mobile-nav{
