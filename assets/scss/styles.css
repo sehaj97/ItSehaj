@@ -248,6 +248,12 @@ footer h4 {
   width: 85%;
   padding-top: 5%;
 }
+@media screen and (max-width: 1024px) {
+  .project-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .first-Card {
   display: flex;
@@ -255,21 +261,26 @@ footer h4 {
 }
 
 .card-container {
-  height: 250px;
-  width: 500px;
+  height: 25vh;
+  width: 40vw;
   border-radius: 50px;
   background-size: cover;
 }
 
 .first-card-container {
-  height: 300px;
-  width: 570px;
+  height: 30vh;
+  width: 50vw;
 }
 
 .cards {
   background-color: black;
   background-image: linear-gradient(red, #ffc107);
   transition: transform 1s;
+}
+@media screen and (max-width: 1024px) {
+  .cards {
+    margin: 15px;
+  }
 }
 .cards:hover {
   transform: scale(1.1);
@@ -294,11 +305,27 @@ footer h4 {
   padding-left: 20px;
   padding: 10px 20px 10px 20px;
 }
+@media screen and (max-width: 1024px) {
+  .cards .card .card-item div {
+    width: 80%;
+  }
+}
 .cards .card .card-item div span {
   font-weight: bold;
   font-size: 1.1em;
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  .cards .card .card-item div span {
+    justify-content: center;
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards .card .card-item div p {
+    display: none;
+  }
 }
 
 .btn {

@@ -244,6 +244,11 @@ footer{
     justify-content: space-evenly;
     width: 85%;
     padding-top: 5%;
+            
+    @media screen and (max-width: $small){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .first-Card{
@@ -251,22 +256,26 @@ footer{
     justify-content: center;
 }
 
-.card-container{    
-    height: 250px;
-    width: 500px;
+.card-container{ 
+    height: 25vh;
+    width: 40vw;
     border-radius: 50px;
     background-size: cover;
 }
 
 .first-card-container{    
-    height: 300px;
-    width: 570px;
+    height: 30vh;
+    width: 50vw;
 }
 
 .cards{
     background-color: black;
     background-image: linear-gradient(red, $color-yellow);
     transition: transform 1s;
+            
+    @media screen and (max-width: $small){
+        margin: 15px;
+    }
 
     &:hover{
         transform: scale(1.1);
@@ -288,12 +297,24 @@ footer{
                 height: 25%;
                 border-radius: 0 50px 50px 0;
                 padding-left: 20px;
-                padding: 10px 20px 10px 20px;
+                padding: 10px 20px 10px 20px;       
+                @media screen and (max-width: $small){
+                    width: 80%;
+                }
                 span{
                     font-weight: bold;
                     font-size: 1.1em;
                     display: flex;
                     flex-wrap: wrap;
+                    @media screen and (max-width: $small){
+                        justify-content: center;
+                        font-size: 1.8em;
+                    }
+                }
+                p{
+                    @media screen and (max-width: $small){
+                        display: none;
+                    } 
                 }
             }
         }
