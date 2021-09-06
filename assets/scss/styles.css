@@ -458,4 +458,14 @@ footer h4 {
   }
 }
 
+.submit-btn {
+  width: 11vw !important;
+  height: 5vh;
+}
+@media screen and (max-width: 768px) {
+  .submit-btn {
+    width: 20vw !important;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

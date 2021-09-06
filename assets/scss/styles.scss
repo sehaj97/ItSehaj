@@ -454,3 +454,11 @@ footer{
         display: none;
     }
 }
+
+.submit-btn{
+    width: 11vw !important; 
+    height: 5vh;
+    @media screen and (max-width: $mobile) {
+        width: 20vw !important;
+    }
+}
