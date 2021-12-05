@@ -262,7 +262,7 @@ footer h4 {
 
 .card-container {
   height: 25vh;
-  width: 40vw;
+  width: 30vw;
   border-radius: 50px;
   background-size: cover;
 }
@@ -301,6 +301,7 @@ footer h4 {
 }
 .cards .card .card-item div {
   background-color: beige;
+  opacity: 0.9;
   width: 40%;
   height: 25%;
   border-radius: 0 50px 50px 0;
@@ -309,6 +310,7 @@ footer h4 {
 }
 @media screen and (max-width: 1024px) {
   .cards .card .card-item div {
+    opacity: 0.9;
     width: 80%;
   }
 }
