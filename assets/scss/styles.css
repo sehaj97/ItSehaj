@@ -262,14 +262,24 @@ footer h4 {
 
 .card-container {
   height: 25vh;
-  width: 30vw;
+  width: 35vw;
   border-radius: 50px;
   background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .card-container {
+    width: 70vw;
+  }
 }
 
 .first-card-container {
   height: 30vh;
   width: 50vw;
+}
+@media screen and (max-width: 1024px) {
+  .first-card-container {
+    width: 90vw;
+  }
 }
 
 .cards {
@@ -301,7 +311,6 @@ footer h4 {
 }
 .cards .card .card-item div {
   background-color: beige;
-  opacity: 0.9;
   width: 40%;
   height: 25%;
   border-radius: 0 50px 50px 0;
@@ -310,7 +319,6 @@ footer h4 {
 }
 @media screen and (max-width: 1024px) {
   .cards .card .card-item div {
-    opacity: 0.9;
     width: 80%;
   }
 }

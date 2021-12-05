@@ -258,14 +258,20 @@ footer{
 
 .card-container{ 
     height: 25vh;
-    width: 40vw;
+    width: 35vw;
     border-radius: 50px;
-    background-size: cover;
+    background-size: cover;       
+    @media screen and (max-width: $small){
+        width: 70vw;
+    }
 }
 
 .first-card-container{    
     height: 30vh;
-    width: 50vw;
+    width: 50vw;       
+    @media screen and (max-width: $small){
+        width: 90vw;
+    }
 }
 
 .cards{
