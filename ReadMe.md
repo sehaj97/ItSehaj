@@ -1,7 +1,7 @@
-# Refactor Horiseon social solution services Code
+# Itsehaj - portfolio
 
 ## Link to Application
-Click on link to see the deployed website [https://sehaj97.github.io/My-Awesome-Portfolio/](https://sehaj97.github.io/My-Awesome-Portfolio/)
+Click on link to see the deployed website [https://sehaj97.github.io/ItSehaj/](https://sehaj97.github.io/ItSehaj/)
 
 ## Description
 This is my protfolio.
